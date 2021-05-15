@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+
+    <title>Stroke Prediction</title>
+  </head>
+  <body>
+    <h1>Stroke Prediction</h1>
+    <h3>{{ prediction_text }}<h3>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+
+                <form method="post" action="{{ url_for('predictstroke')}}">
+                  <div class="mb-3"> 
+                    <select name="gender" class="form-select" aria-label="Default select example">
+                    <option selected >Choose Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                    </select>
+                  </div>
+                    <div class="mb-3">
+                    <label for="age" class="form-label">Age</label>
+                    <input type="text" class="form-control" id="age" name="age" aria-describedby="emailHelp">
+                   
+                    </div>
+                    <div class="mb-3"> 
+                    <select name="hyper" class="form-select" aria-label="Default select example">
+                      <option selected>Select Hypertension</option>
+                      <option value="1">Yes</option>
+                      <option value="0">No</option>
+                      
+                      </select>
+                    </div>
+                      <div class="mb-3"> 
+                      <select name="heartdisis" class="form-select" aria-label="Default select example">
+                        <option selected>Select Heart Desease</option>
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                        
+                        </select>
+                      </div>
+                        <div class="mb-3"> 
+                        <select name="maried" class="form-select" aria-label="Default select example">
+                          <option selected>Select Maried</option>
+                          <option value="Yes">Yes</option>
+                          <option value="No">No</option>
+                          </select>
+                        </div>
+                          <div class="mb-3"> 
+                          <select name="worktype" class="form-select" aria-label="Default select example">
+                            <option selected>Select Work Type</option>
+                            <option value="Private">Private</option>
+                            <option value="Self-employed">Self-employed</option>
+                            <option value="govtjob">Govt Job</option>
+                            <option value="children">Children</option>
+                            <option value="Never_worked">Never worked</option>
+                            </select>
+                          </div>
+                            <div class="mb-3"> 
+                            <select name="residenttype" class="form-select" aria-label="Default select example">
+                              <option selected>Resident Type</option>
+                              <option value="Urban">Urban</option>
+                              <option value="Rural">Rural</option>
+                            </select>
+                          </div>
+                    <div class="mb-3">
+                    <label for="avgglucose" class="form-label">Avg Glucose Level</label>
+                    <input type="text" name="avgglucose" class="form-control" id="avgglucose">
+                    </div>
+                    
+                    <div class="mb-3">
+                      <label for="bmi" class="form-label">Bmi</label>
+                      <input type="text" name="bmi" class="form-control" id="bmi">
+                    </div>
+                    <div class="mb-3"> 
+                    <select name="smoking" class="form-select" aria-label="Default select example">
+                      <option selected>Smoking Status Type</option>
+                      <option value="formerly smoked">Formerly Smoked</option>
+                      <option value="never smoked">Never Smoked</option>
+                      <option value="smokes">Smokes</option>
+                      <option value="unknown">Unknown</option>
+                    </select>
+                  </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+                
+  </body>
+</html>
